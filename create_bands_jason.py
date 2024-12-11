@@ -24,6 +24,6 @@ bands=pd.DataFrame(wlst)
 #import json
 #bands=json.dumps(wlst,indent=2)
 #print(bands.iloc[0])
-bands.to_json("bandObj.json",orient="records")
+bands.to_json("bandsObj.json",orient="records")
 
   
