@@ -13,9 +13,11 @@ for artist in artists:
   sub=df[df["artist"]==artist]
   
   for j in range(len(sub)):
-    tracksObj[artist].append(sub.iloc[j].to_dict())
-import json
-tracks=json.dumps(tracksObj,indent=1)
+    sub.to_json("{perf}.json".format(perf=artist),orient="records")
+    #txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
+    #tracksObj[artist].append(sub.iloc[j].to_dict())
+#import json
+#tracks=json.dumps(tracksObj,indent=1)
 #tracksLib={}
 #tracksLib["tracksLib"]=tracksObj
 print(tracks)
