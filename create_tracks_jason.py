@@ -3,7 +3,7 @@ tracksObj={}
 tracksObj["none"]=[{"artist":"none"}]
 df=pd.read_csv("batch1.csv")
 del df["indexOf"]
-artists=df["artist"].unique().tolist()[0:2]
+artists=df["artist"].unique().tolist()
 for i in range(len(artists)):
   tracksObj[artists[i]]=[]
 for artist in artists:
