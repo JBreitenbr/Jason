@@ -1,7 +1,7 @@
 import pandas as pd
 tracksObj={}
 tracksObj["none"]=[{"artist":"none"}]
-df=pd.read_csv("batch1.csv")
+df=pd.read_csv("batch1_ex.csv")
 del df["indexOf"]
 del df["album"]
 del df["year"]
