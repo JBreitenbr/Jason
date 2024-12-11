@@ -20,7 +20,10 @@ for i in range(len(blst)):
     slst[i].append({"name":blst[i][j]})
 for i in range(len(wlst)):
   wlst[i]["bands"]=slst[i]
-bandObj={}
-bandObj["bandLib"]=wlst
-print(bandObj)
+bands=pd.DataFrame(wlst)
+#import json
+#bands=json.dumps(wlst,indent=2)
+#print(bands.iloc[0])
+bands.to_json("bandObj.json",orient="records")
+
   
