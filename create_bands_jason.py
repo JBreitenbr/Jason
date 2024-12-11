@@ -1,5 +1,6 @@
 import pandas as pd
-s=pd.read_csv("batch1.csv")
+s=pd.read_csv("batch1_ex.csv")
+del s["index"]
 for i in range(len(s)):
   s.loc[i,"maiuscule"]=s.loc[i,"alphaname"].upper()[0]
 
