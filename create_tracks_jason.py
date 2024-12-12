@@ -1,7 +1,7 @@
 import pandas as pd
 tracksObj={}
 tracksObj["none"]=[{"artist":"none"}]
-df=pd.read_csv("batch1_ex.csv")
+df=pd.read_csv("halfed.csv")
 del df["indexOf"]
 del df["album"]
 del df["year"]
@@ -13,7 +13,7 @@ for artist in artists:
   sub=df[df["artist"]==artist]
   
   for j in range(len(sub)):
-    sub.to_json("TracksData/{perf}.json".format(perf=artist),orient="records")
+    sub.to_json("SongsData/{perf}.json".format(perf=artist),orient="records")
     #txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
     #tracksObj[artist].append(sub.iloc[j].to_dict())
 #import json

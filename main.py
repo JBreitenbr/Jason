@@ -1,13 +1,5 @@
 import pandas as pd
-df0=pd.read_csv("brock1_cleaned.csv")
-pt=pd.read_csv("brock2_cleaned_pt1.csv")
-
-
-pt.drop_duplicates(inplace=True)
-gr=pd.DataFrame(pt["track_id"].value_counts())
-dupli=gr[gr["count"]>1].index.tolist()
-df0=pd.concat([df0,pt])
-df0.reset_index(inplace=True)
+df0=pd.read_csv("first_half.csv")
 lst1=df0["album_tracks"].tolist()
 lst2=[]
 for i in range(len(lst1)):
@@ -27,4 +19,4 @@ bij=pd.read_csv("bij.csv")
 df=pd.merge(df0,bij,on="artist",how="inner")
 df.sort_values(by=["alphaname","album","year","album_date","indexOf"],inplace=True)
 print(df.iloc[16])
-df.to_csv("batch1_ex.csv",index=False)
+df.to_csv("halfed.csv",index=False)
