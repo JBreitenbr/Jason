@@ -1,5 +1,5 @@
 import pandas as pd
-df0=pd.read_csv("first_half.csv")
+df0=pd.read_csv("spoti_data_cleaned.csv")
 lst1=df0["album_tracks"].tolist()
 lst2=[]
 for i in range(len(lst1)):
@@ -19,4 +19,4 @@ bij=pd.read_csv("bij.csv")
 df=pd.merge(df0,bij,on="artist",how="inner")
 df.sort_values(by=["alphaname","album","year","album_date","indexOf"],inplace=True)
 print(df.iloc[16])
-df.to_csv("halfed.csv",index=False)
+df.to_csv("doubled.csv",index=False)

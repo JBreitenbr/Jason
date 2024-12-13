@@ -1,5 +1,5 @@
 import pandas as pd
-s=pd.read_csv("halfed.csv")
+s=pd.read_csv("doubled.csv")
 
 for i in range(len(s)):
   s.loc[i,"maiuscule"]=s.loc[i,"alphaname"].upper()[0]
@@ -25,6 +25,6 @@ bands=pd.DataFrame(wlst)
 #import json
 #bands=json.dumps(wlst,indent=2)
 #print(bands.iloc[0])
-bands.to_json("bandObj.json",orient="records")
+bands.to_json("bandsObj.json",orient="records")
 
   
